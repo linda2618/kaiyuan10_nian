@@ -1,0 +1,9 @@
+mixin shadow {
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.1);
+}
+mixin hover-border {
+  border: 2px solid transparent;
+}
+mixin hover-border:hover {
+  border: 2px solid var(--deep-bg);
+}
