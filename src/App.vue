@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    kaiyuan10nian
+    {{app.getConfig('baseUrl')}}
   </div>
 
 </template>
