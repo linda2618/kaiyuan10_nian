@@ -1,4 +1,6 @@
 import sysCfg, { ISysCfg, ISysCfgBModItem } from "./syscfg";
+import appCtl from "@/controller/APPCtl";
+
 const app = {
   //获取系统配置信息
   getConfig<T>(key: keyof ISysCfg): T {
@@ -13,6 +15,9 @@ const app = {
       return true;
     }
     return false;
+  },
+  getAppCtl() {
+    return appCtl;
   },
 };
 export type IApp = typeof app;

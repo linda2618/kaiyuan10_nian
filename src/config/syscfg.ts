@@ -17,7 +17,7 @@ const iSysCfg: ISysCfg = {
   bmodNames: [
     {
       name: "blog",
-      enable: true,
+      enable: false,
     },
   ],
 };

@@ -5,9 +5,17 @@ import { resolve } from "path";
 import autoprefixer from "autoprefixer";
 import postCssPxToRem from "postcss-pxtorem";
 
+//配置vant插件
+import styleImport, { VantResolve } from "vite-plugin-style-import";
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    styleImport({
+      resolves: [VantResolve()],
+    }),
+  ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
