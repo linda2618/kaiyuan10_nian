@@ -3,6 +3,7 @@ import Tools from "@/utils/Tools";
 import { lpk, initLpk } from "@/config/lpk";
 import { initLoginUserInfo } from "@/controller/APPCtl";
 import { App } from "vue";
+import { initTheme } from "./theme";
 
 //声明全局变量相关的类型
 type IGlobalVarsKey = "app" | "ipk" | "Tools" | "Ajax";
@@ -32,7 +33,7 @@ export const initApp = async () => {
 
   //设置系统主题样式
 
-  // initTheme();
+  initTheme();
 
   initLpk();
 

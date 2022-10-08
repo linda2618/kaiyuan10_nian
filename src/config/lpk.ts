@@ -1,5 +1,5 @@
 import { get } from "lodash";
-import { LOCALE_OPTIONS } from "@/utils/Constans";
+import { LOCALE_OPTIONS } from "@/utils/Constants";
 
 import { Locale } from "vant";
 // 引入英文语言包

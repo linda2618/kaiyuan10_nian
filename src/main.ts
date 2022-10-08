@@ -1,9 +1,15 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import { initApp, initGlobalComponents } from "./config/init";
+import { initRouter } from "./router/index";
+
 import "./assets/fonts/iconfont.css";
 import "./assets/styles/global.less";
 import "normalize.css/normalize.css";
-import { initApp, initGlobalComponents } from "./config/init";
+
+import "./assets/styles/base-theme.less";
+import "./assets/styles/blue-theme.less";
+import "./assets/styles/black-theme.less";
 
 (async () => {
   //初始化系统基础配置信息（保证所有模块的基础数据加载完后，才创建UI）
@@ -27,6 +33,10 @@ import { initApp, initGlobalComponents } from "./config/init";
   uiApp.config.globalProperties.lpk = window.lpk; //语言包
 
   //初始化状态管理与路由，并渲染根组件
+  //1，初始化基础模块的路由配置
+  //2，初始化各业务模块的路由配置
+  //3.对路由守卫进行处理
+  //4.keep-alive的使用
 
-  uiApp.mount("#app");
+  uiApp.use(initRouter()).mount("#app");
 })();
